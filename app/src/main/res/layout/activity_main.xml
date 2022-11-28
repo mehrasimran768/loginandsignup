@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="20dp"
-    android:background="@drawable/gradient"
     tools:context=".MainActivity">
     <TextView
         android:id="@+id/text"
@@ -24,13 +23,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="32dp"
         android:hint="Firstname"
         app:layout_constraintBottom_toTopOf="@+id/last"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="gone" />
 
     <EditText
         android:id="@+id/last"
@@ -42,7 +41,8 @@
         android:hint="Lastname"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/first" />
+        app:layout_constraintTop_toBottomOf="@+id/first"
+        tools:visibility="gone" />
 
     <EditText
         android:id="@+id/email"
@@ -54,7 +54,8 @@
         android:hint="Email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/last" />
+        app:layout_constraintTop_toTopOf="@+id/last"
+        tools:visibility="gone" />
 
     <EditText
         android:id="@+id/user"
@@ -80,6 +81,7 @@
         android:layout_marginTop="26dp"
         android:layout_marginEnd="20dp"
         android:hint="Password"
+        android:password="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/user" />
@@ -104,8 +106,22 @@
         android:layout_height="wrap_content"
         android:text="register"
         android:textAlignment="center"
-
+        android:background="#FFFAFA"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteX="16dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/button"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/toggle"
+        app:layout_constraintVertical_bias="0.583"
+        tools:visibility="visible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
